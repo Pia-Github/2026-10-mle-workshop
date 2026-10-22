@@ -9,13 +9,13 @@ this project is based on https://github.com/ynotzort/ml-engineering-contsructor-
 
 ## how to install UV
 
-just run 'curl -lsSf https://docs.astral.sh/uv/getting-started/installation/ |sh'
+just run `curl -lsSf https://docs.astral.sh/uv/getting-started/installation/ |sh`
 
 ## day 1 steps
 
 ### get the notebook
--create a new folder day_1 (mkdir day_1)
--change directory into day_1 (cd day_1)
+-create a new folder day_1 (`mkdir day_1`)
+-change directory into day_1 (`cd day_1`)
 -get the original notebook:
 
 ```bash
@@ -26,5 +26,18 @@ cd ..
 ```
 
 ### create a uv project
--initialize a uv project `with uv init --python 3.10`
+-initialize a uv project with `uv init --python 3.10`
 -run `uv sync`
+
+### install dependencies
+-`uv add scikit-learn==1.2.2 pandas pyarrow`
+-`uv add --dev jupyter seaborn`
+-now lets fix the error with numpy: `uv add numpy==1.26.4`
+
+### launch jupyter notebook
+-`uv run jupyter notebook`
+
+### make vscode recognize the python env correctly and use jupyter from within vscode
+-open .py file (`day_1/src/day_1/__init__.py`)
+-on the bottom right click on the python version -> browse -> find the path to python (here it was `/workspaces/2026-10-mle-workshop/day_1/.venv/bin/python`)
+-go to jupyter notebook file and click select kernel -> python environments -> day 1

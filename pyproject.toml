@@ -1,0 +1,28 @@
+[project]
+name = "2026-10-mle-workshop"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Pia", email = "103035405+Pia-Github@users.noreply.github.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy==1.26.4",
+    "pandas>=2.3.3",
+    "pyarrow>=25.0.1",
+    "scikit-learn==1.2.2",
+]
+
+[project.scripts]
+2026-10-mle-workshop = "2026_10_mle_workshop:main"
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "jupyter>=1.1.1",
+    "seaborn>=0.13.2",
+]
